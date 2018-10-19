@@ -12,7 +12,7 @@ const signin = require('./controllers/Signin');
 const db = knex({
         client: 'pg',
         connection: {
-          host : '127.0.0.1',
+          host : 'postgresql-horizontal-62254',
           user : 'postgres',
           password : '',
           database : 'facerecognition'
