@@ -9,13 +9,12 @@ const profile = require('./controllers/Profile');
 const image = require('./controllers/Image');
 const signin = require('./controllers/Signin');
 
+// Check Heroku doc for stablishing the connection to DB
 const db = knex({
         client: 'pg',
         connection: {
-          host : 'postgresql-horizontal-62254',
-          user : 'postgres',
-          password : '',
-          database : 'facerecognition'
+          connectionString : process.env.DATABASE_URL,
+          ssl: true
         }
     });
 
